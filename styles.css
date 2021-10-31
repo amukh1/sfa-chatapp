@@ -1,0 +1,109 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color:cornflowerblue;
+    
+}
+
+
+
+.chatContainer {
+    background-color: black;
+    width: 400px;
+    height: 525px;
+    opacity: 30%;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    display: flex;
+    flex-direction:column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 25px;
+}
+
+.inputContainer {
+    background-color: black;
+    width: 400px;
+    height: 100px;
+    opacity: 30%;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    border-radius: 25px;
+}
+
+.ccc {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* flex-direction: column; */
+}
+
+
+.chat {
+    background-color: rgb(169, 252, 255);
+border-radius: 10px;
+transition: all 0.5s;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+    opacity: 100%;
+    /* border-radius: 25px; */
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.chat:hover {
+    background-color: rgb(169, 252, 255);
+border-radius: 10px;
+    transition: all 0.5s;
+    margin: 10px;
+    padding: 10px;
+    width: 450px;
+    height: 75px;
+    opacity: 100%;
+    /* border-radius: 25px; */
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: relative;
+}
+
+.Message {
+    color: rgb(250, 250, 250);
+    margin: 4px;
+}
+
+.input {
+    border-radius: 25px;
+}
+
+.send {
+    margin: 4px;
+    border-radius: 10px;
+    background-color: cornsilk;
+    transition: all 0.3s;
+}
+
+.blur {
+    /* background-color: red; */
+    transition: all 0.25s;
+    filter: blur(100px);
+}
+
+.noblur {
+    transition: all 0.25s;
+    filter: blur(0px); 
+}

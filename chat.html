@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFA ChatApp</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+</head>
+<body id="body">
+    
+    <div class="headerContainer">
+<h1>SF ChatApp</h1>
+</div>
+
+<div class="ccc">
+    <div id='chatContainer' class="chatContainer">
+        <button class="update" onclick="update()">update</button>
+    </div>  
+    <div class="inputContainer">
+        <div class="Message">Message:</div>
+        <input id='input' class='input' type="text" placeholder="eeeeee">
+        <button id="send" class="send" onClick="send()">SEND</button>
+    </div>   
+        </div>
+
+    <!-- JAVASCRIPT -->
+    <!-- /socket.io/socket.io.js -->
+    <script src="../sfa-chatapp-api/socket.io/socket.io.js"></script>
+    <script src="../sfa-chatapp-api/node_modules/socket.io/client-dist/socket.io.js"></script>
+    <script>
+        var socket = io();
+      </script>
+    <script src="app.js"></script>
+</body>
+</html>
