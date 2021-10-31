@@ -1,6 +1,22 @@
 
 
-document.getElementById('body').classList.add('blur');
+// document.getElementById('body').classList.add('blur');
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       console.log(xhr.responseText)
+       if(xhr.responseText == 'online'){
+        document.getElementById('header').innerHTML = 'SF Chatapp'
+       return
+       }
+    }else {
+      document.getElementById('header').innerHTML = 'THE SERVER IS OFFLINE!'
+    }
+};
+xhr.open("GET", "https://chatapi.amukh1.repl.co/apiCheck", true);
+xhr.send();
 
 if(window.localStorage.getItem('blur') == 'on') {
     document.getElementById('body').classList.add('blur');
