@@ -1,4 +1,24 @@
+// var socket = io()
 
+setInterval(function(){ 
+  console.log('update')
+  update() }, 1000);
+
+const ws = new WebSocket("ws://https://chatapi.amukh1.repl.co:3001")
+
+ws.addEventListener('open', () => {
+  console.log('connected')
+})
+
+ws.addEventListener('message', e => {
+  console.log(e.data)
+  if(e.data == 'update'){
+    console.log('update')
+    update()
+  }
+})
+
+// socket.emit('socket', { "message":"Hello" });
 
 // document.getElementById('body').classList.add('blur');
 
@@ -140,3 +160,4 @@ xhr.onreadystatechange = function() {
 xhr.open("GET", "https://chatapi.amukh1.repl.co/api", true);
 xhr.send();
   }
+
