@@ -1,6 +1,8 @@
+ let mod = 'mod2021'
+ 
  var check = prompt('Password:', 'PASSWORD HERE')
 
- if(check = 'mod2021') {
+ if(check = mod) {
      return
  } else {
     document.getElementById('body').classList.add('blur');
