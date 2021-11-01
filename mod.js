@@ -90,7 +90,7 @@
           }
        }
    };
-   xhr.open("post", `https://api.amukh1.dev/apiPOST?msg=<center><h1>${document.getElementById('input').value} {MOD}</h1></center>`, true);
+   xhr.open("post", `https://api.amukh1.dev/apiPOST?msg=<h1>${document.getElementById('input').value} {MOD}</h1>`, true);
    xhr.send();
  
      // document.getElementById('body').classList.add('blur');
@@ -100,7 +100,7 @@
  div.setAttribute("id", "chat");
  // div.setAttribute("onClick", "fullScreen()")
  document.getElementById('chatContainer').appendChild(div)
- div.innerHTML = `${document.getElementById('input').value}`
+ div.innerHTML = `<h1>${document.getElementById('input').value} {MOD}</h1>`
  var count= $('div').filter('.chat').length;
  console.log(count)
  if(count >= 6) {
