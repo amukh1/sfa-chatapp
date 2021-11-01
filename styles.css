@@ -107,3 +107,9 @@ border-radius: 10px;
     transition: all 0.25s;
     filter: blur(0px); 
 }
+
+.signIn {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
