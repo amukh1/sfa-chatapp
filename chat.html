@@ -35,7 +35,8 @@
   
     <!-- <script src="app.js"></script> -->
     <script>
-        // var socket = io()
+     // var socket = io()
+let adminLevel = 0
 
 setInterval(function(){ 
   console.log('update')
@@ -133,6 +134,7 @@ function send() {
     
     let div = document.createElement('div');
 div.classList.add('chat');
+// div.setAttribute("onclick", "admin()");
 div.setAttribute("id", "chat");
 // div.setAttribute("onClick", "fullScreen()")
 document.getElementById('chatContainer').appendChild(div)
@@ -142,6 +144,8 @@ console.log(count)
 if(count >= 6) {
     $('.chatContainer').find('div').first().remove();
 }
+
+
 
 if(count >= 7) {
     console.log('oh no!')
@@ -177,7 +181,6 @@ hotkeys('c,b,r,/,enter', function (event, handler){
   });
 
 
-  
 
   function update() {
     var xhr = new XMLHttpRequest();
@@ -196,7 +199,6 @@ xhr.onreadystatechange = function() {
 xhr.open("GET", "https://chatapi.amukh1.repl.co/api", true);
 xhr.send();
   }
-
 
     </script>
 </body>
