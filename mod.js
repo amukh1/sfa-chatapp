@@ -1,3 +1,12 @@
+ var check = prompt('Password:', 'PASSWORD HERE')
+
+ if(check = 'mod2021') {
+     return
+ } else {
+    document.getElementById('body').classList.add('blur');
+ }
+ 
+ 
  // var socket = io()
  let name;
 
