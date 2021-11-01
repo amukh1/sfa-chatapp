@@ -5,7 +5,7 @@ xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        // Typical action to be performed when the document is ready:
        console.log(xhr.responseText)
-       let mod = xhr.responseText
+       mod = xhr.responseText
     }
 };
 xhr.open("GET", "https://api.amukh1.dev/mod", true);
