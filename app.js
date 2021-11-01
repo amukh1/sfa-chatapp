@@ -1,4 +1,4 @@
-// var socket = io()
+ // var socket = io()
 let name;
 
 setInterval(function(){ 
@@ -90,7 +90,7 @@ function send() {
          }
       }
   };
-  xhr.open("post", `https://api.amukh1.dev/apiPOST?msg=${document.getElementById('input').value} -${name}`, true);
+  xhr.open("post", `https://api.amukh1.dev/apiPOST?msg=${document.getElementById('input').value}`, true);
   xhr.send();
 
     // document.getElementById('body').classList.add('blur');
@@ -100,7 +100,7 @@ div.classList.add('chat');
 div.setAttribute("id", "chat");
 // div.setAttribute("onClick", "fullScreen()")
 document.getElementById('chatContainer').appendChild(div)
-div.innerHTML = `${document.getElementById('input').value} -${name}`
+div.innerHTML = `${document.getElementById('input').value}`
 var count= $('div').filter('.chat').length;
 console.log(count)
 if(count >= 6) {
