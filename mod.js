@@ -16,7 +16,7 @@ xhr.send();
  var check = prompt('Password:', 'PASSWORD HERE')
 
  if(check = mod) {
-     return
+     console.log('Mod logged in!')
  } else {
     document.getElementById('body').classList.add('blur');
  }
