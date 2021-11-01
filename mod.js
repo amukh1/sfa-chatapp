@@ -11,7 +11,7 @@ xhr.onreadystatechange = function() {
 xhr.open("GET", "https://api.amukh1.dev/mod", true);
 xhr.send();
  
-
+mod = mod2021
  
  var check = prompt('Password:', 'PASSWORD HERE')
 
