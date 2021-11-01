@@ -4,7 +4,7 @@ setInterval(function(){
   console.log('update')
   update() }, 1000);
 
-const ws = new WebSocket("ws://https://chatapi.amukh1.repl.co:3001")
+const ws = new WebSocket("ws://https://api.amukh1.dev:3001")
 
 ws.addEventListener('open', () => {
   console.log('connected')
@@ -35,7 +35,7 @@ xhr.onreadystatechange = function() {
       document.getElementById('header').innerHTML = 'THE SERVER IS OFFLINE!'
     }
 };
-xhr.open("GET", "https://chatapi.amukh1.repl.co/apiCheck", true);
+xhr.open("GET", "https://api.amukh1.dev/apiCheck", true);
 xhr.send();
 
 if(window.localStorage.getItem('blur') == 'on') {
@@ -89,7 +89,7 @@ function send() {
          }
       }
   };
-  xhr.open("post", `https://chatapi.amukh1.repl.co/apiPOST?msg=${document.getElementById('input').value}`, true);
+  xhr.open("post", `https://api.amukh1.dev/apiPOST?msg=${document.getElementById('input').value}`, true);
   xhr.send();
 
     // document.getElementById('body').classList.add('blur');
@@ -156,7 +156,7 @@ xhr.onreadystatechange = function() {
        }
     }
 };
-xhr.open("GET", "https://chatapi.amukh1.repl.co/api", true);
+xhr.open("GET", "https://api.amukh1.dev/api", true);
 xhr.send();
   }
 
