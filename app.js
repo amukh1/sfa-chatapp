@@ -1,4 +1,5 @@
 // var socket = io()
+let name;
 
 setInterval(function(){ 
   console.log('update')
@@ -89,7 +90,7 @@ function send() {
          }
       }
   };
-  xhr.open("post", `https://api.amukh1.dev/apiPOST?msg=${document.getElementById('input').value}`, true);
+  xhr.open("post", `https://api.amukh1.dev/apiPOST?msg=${document.getElementById('input').value + name}`, true);
   xhr.send();
 
     // document.getElementById('body').classList.add('blur');
@@ -99,7 +100,7 @@ div.classList.add('chat');
 div.setAttribute("id", "chat");
 // div.setAttribute("onClick", "fullScreen()")
 document.getElementById('chatContainer').appendChild(div)
-div.innerHTML = `${document.getElementById('input').value}`
+div.innerHTML = `${document.getElementById('input').value + name}`
 var count= $('div').filter('.chat').length;
 console.log(count)
 if(count >= 6) {
@@ -160,3 +161,9 @@ xhr.open("GET", "https://api.amukh1.dev/api", true);
 xhr.send();
   }
 
+
+  function signIn() {
+    alert('sIGNED iN')
+    name = document.getElementById('signInput')
+    document.getElementById('signIn').style.display = 'none'
+  }
