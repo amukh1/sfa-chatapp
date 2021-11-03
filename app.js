@@ -1,3 +1,5 @@
+document.getElementById('body').classList.add('blur');
+ 
  // var socket = io()
  let name;
 
