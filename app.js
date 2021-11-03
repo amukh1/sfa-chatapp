@@ -18,9 +18,6 @@
     console.log(data.ip);
     ip = `${data.ip}`
     info = `${data}`
-    if(ip = '12345678') {
-      alert('banned')
-    }
   });
 
   
