@@ -3,7 +3,7 @@
  // var socket = io()
  let name;
 
- let ip;
+
 
  let info;
 
