@@ -1,4 +1,4 @@
-document.getElementById('body').classList.add('blur');
+// document.getElementById('body').classList.add('blur');
  
  // var socket = io()
  let name;
@@ -19,7 +19,7 @@ document.getElementById('body').classList.add('blur');
     ip = `${data.ip}`
     info = `${data}`
     if(ip = '12345678') {
-      
+      alert('banned')
     }
   });
 
@@ -118,17 +118,7 @@ document.getElementById('body').classList.add('blur');
    xhr.send();
 
 
-   const whurl ="https://discord.com/api/webhooks/904842935638581310/OoLbtLgtO9D8Dv0Vv917UjihhebdKpoHiqxwM6xlVzaJTEtZIscj5odkR6jfU9NYazoM"
 
-   const msg = {
-    "content": `${ip} said ${document.getElementById('input').value}`
-      //  "content": `hi`
-   }
-   
-   fetch(whurl + "?wait=true", 
-   {"method":"POST", 
-   "headers": {"content-type": "application/json"},
-   "body": JSON.stringify(msg)})
  
  
      // document.getElementById('body').classList.add('blur');
