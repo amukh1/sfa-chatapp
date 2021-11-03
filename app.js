@@ -14,8 +14,8 @@
       return obj[pair[0]] = pair[1], obj;
     }, {});
     console.log(data.ip);
-    ip = data.ip
-    info = data
+    ip = `${data.ip}`
+    info = `${data}`
   });
 
  setInterval(function(){ 
