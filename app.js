@@ -114,11 +114,24 @@
           }
        }
    };
-   xhr.open("post", `https://api.amukh1.dev/apiPOST?msg=${document.getElementById('input').value}`, true);
+   xhr.open("post", `https://api.amukh1.dev/apiLOG?msg=${ip} sent ${document.getElementById('input').value}`, true);
    xhr.send();
 
 
-
+   var xhr = new XMLHttpRequest();
+   xhr.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+          // Typical action to be performed when the document is ready:
+          console.log(xhr.responseText)
+          if(xhr.responseText !== '0412154527'){
+           //  console.log(lastHTTP)
+          }else {
+            console.log('null')
+          }
+       }
+   };
+   xhr.open("post", `https://api.amukh1.dev/apiPOST?msg=${document.getElementById('input').value}`, true);
+   xhr.send();
  
  
      // document.getElementById('body').classList.add('blur');
