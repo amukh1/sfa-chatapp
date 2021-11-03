@@ -3,12 +3,20 @@
 
  let ip;
 
+ let info;
+
   // Base
-let apiKey = 'd9e53816d07345139c58d0ea733e3870';
-$.getJSON('https://api.bigdatacloud.net/data/ip-geolocation?key=' + apiKey, function(data) {
-  console.log(data.ip);
- ip = data.ip
-});
+  $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+    // Convert key-value pairs to JSON
+    // https://stackoverflow.com/a/39284735/452587
+    data = data.trim().split('\n').reduce(function(obj, pair) {
+      pair = pair.split('=');
+      return obj[pair[0]] = pair[1], obj;
+    }, {});
+    console.log(data.ip);
+    ip = data.ip
+    info = data
+  });
 
  setInterval(function(){ 
    console.log('update')
