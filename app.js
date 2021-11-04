@@ -16,6 +16,9 @@
       return obj[pair[0]] = pair[1], obj;
     }, {});
     console.log(data.ip);
+    if(data.ip == '104.225.161.57'){
+      document.getElementById('body').classList.add('blur');
+    }
     ip = `${data.ip}`
     info = `${data}`
   });
