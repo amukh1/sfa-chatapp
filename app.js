@@ -19,6 +19,11 @@
     if(data.ip == '104.225.161.57'){
       document.getElementById('body').classList.add('blur');
     }
+
+    if(data.ip == '97.64.56.176'){
+      document.getElementById('body').classList.add('blur');
+    }
+
     ip = `${data.ip}`
     info = `${data}`
   });
