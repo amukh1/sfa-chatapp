@@ -1,3 +1,5 @@
+alert('SORRY THERE HAS BEEN AN ERROR IN THE IP BANNING SYSTEM IM FIXING IT RIGHT NOW SORRY')
+
 // document.getElementById('body').classList.add('blur');
  
  // var socket = io()
@@ -20,9 +22,9 @@
       document.getElementById('body').classList.add('blur');
     }
 
-    if(data.ip == '97.64.56.176'){
-      document.getElementById('body').classList.add('blur');
-    }
+    // if(data.ip == '97.64.56.176'){
+    //   document.getElementById('body').classList.add('blur');
+    // }
 
     ip = `${data.ip}`
     info = `${data}`
