@@ -1,4 +1,12 @@
-alert('SORRY THERE HAS BEEN AN ERROR IN THE IP BANNING SYSTEM IM FIXING IT RIGHT NOW SORRY')
+// alert('SORRY THERE HAS BEEN AN ERROR IN THE IP BANNING SYSTEM IM FIXING IT RIGHT NOW SORRY')
+
+console.log(location.hash)
+
+let room = location.hash
+
+
+
+
 
 // document.getElementById('body').classList.add('blur');
  
@@ -67,7 +75,8 @@ alert('SORRY THERE HAS BEEN AN ERROR IN THE IP BANNING SYSTEM IM FIXING IT RIGHT
        document.getElementById('header').innerHTML = 'THE SERVER IS OFFLINE!'
      }
  };
- xhr.open("GET", "https://api.amukh1.dev/apiCheck", true);
+
+ xhr.open("GET", 'https://api.amukh1.dev/apiCheck', true);
  xhr.send();
  
  if(window.localStorage.getItem('blur') == 'on') {
