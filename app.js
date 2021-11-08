@@ -2,10 +2,12 @@
 
 console.log(location.hash)
 
-let room = location.hash
 
+let room = 'main'
 
-
+let logUrl = 'https://api.amukh1.dev/apiLOG'
+let postUrl = 'https://api.amukh1.dev/apiPOST'
+let apiUrl = 'https://api.amukh1.dev/api'
 
 
 // document.getElementById('body').classList.add('blur');
@@ -26,9 +28,9 @@ let room = location.hash
       return obj[pair[0]] = pair[1], obj;
     }, {});
     console.log(data.ip);
-    if(data.ip == '104.225.161.57'){
-      document.getElementById('body').classList.add('blur');
-    }
+    // if(data.ip == '104.225.161.57'){
+    //   document.getElementById('body').classList.add('blur');
+    // }
 
     // if(data.ip == '97.64.56.176'){
     //   document.getElementById('body').classList.add('blur');
@@ -115,6 +117,26 @@ let room = location.hash
    }
  
    }
+
+
+
+
+
+   function algebra() {
+
+    var algebraPass = prompt('Enter the password to access the algebra server')
+    if(algebraPass == 'taylor2021'){
+       document.getElementById('servername').innerHTML = ' Server: Algebra '
+       document.getElementById('security').innerHTML = 'Security: Secure'
+       document.getElementById('securitypassage').innerHTML = 'This server is secured by a password'
+    logUrl = 'https://api.amukh1.dev/algebraApiLOG'
+        postUrl = 'https://api.amukh1.dev/algebraApiPOST'
+    apiUrl = 'https://api.amukh1.dev/algebraApi'
+    room = 'algebra'
+    update()
+    }
+
+   }
  
  function send() {
   $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
@@ -142,7 +164,12 @@ let room = location.hash
           }
        }
    };
-   xhr.open("post", `https://api.amukh1.dev/apiLOG?msg=${data.ip} sent ${document.getElementById('input').value}`, true);
+
+   if(room == 'algebra') {
+       logMsg = `${logUrl}?msg=${data.ip} sent ${document.getElementById('input').value} In algebra`
+   }
+
+   xhr.open("post", logMsg, true);
    xhr.send();
 
   });
@@ -158,7 +185,7 @@ let room = location.hash
           }
        }
    };
-   xhr.open("post", `https://api.amukh1.dev/apiPOST?msg=${document.getElementById('input').value}`, true);
+   xhr.open("post", `${postUrl}?msg=${document.getElementById('input').value}`, true);
    xhr.send();
  
  
@@ -226,7 +253,7 @@ let room = location.hash
         }
      }
  };
- xhr.open("GET", "https://api.amukh1.dev/api", true);
+ xhr.open("GET", apiUrl, true);
  xhr.send();
    }
  
