@@ -38,6 +38,7 @@ let apiUrl = 'https://api.amukh1.dev/api'
 
     ip = `${data.ip}`
     info = `${data}`
+    
   });
 
   
