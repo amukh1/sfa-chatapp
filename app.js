@@ -1,6 +1,9 @@
 alert('make sure to sign in https://sfa.amukh1.dev')
 send('A user has joined the chat!')
 
+let naem = prompt('Whats your github username?', 'User')
+
+
 console.log(location.hash)
 
 if(window.localStorage.getItem('signedIn')) {
@@ -200,7 +203,7 @@ let apiUrl = 'https://api.amukh1.dev/api'
           }
        }
    };
-   xhr.open("post", `${postUrl}?msg=${document.getElementById('input').value}`, true);
+   xhr.open("post", `${postUrl}?msg=${naem}: ${document.getElementById('input').value}`, true);
    xhr.send();
  
  
