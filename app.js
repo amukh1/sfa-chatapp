@@ -1,4 +1,4 @@
-// alert('SORRY THERE HAS BEEN AN ERROR IN THE IP BANNING SYSTEM IM FIXING IT RIGHT NOW SORRY')
+alert('make sure to sign in https://sfa.amukh1.dev')
 
 console.log(location.hash)
 
