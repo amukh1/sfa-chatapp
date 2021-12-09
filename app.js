@@ -1,4 +1,5 @@
 alert('make sure to sign in https://sfa.amukh1.dev')
+send('A user has joined the chat!')
 
 console.log(location.hash)
 
