@@ -158,14 +158,6 @@ let apiUrl = 'https://api.amukh1.dev/api'
  
  function send() {
  
-   if(room == 'algebra') {
-       logMsg = `${logUrl}?msg=${data.ip} sent ${document.getElementById('input').value} In algebra`
-   }
-
-   xhr.open("post", logMsg, true);
-   xhr.send();
-
-  });
    var xhr = new XMLHttpRequest();
    xhr.onreadystatechange = function() {
        if (this.readyState == 4 && this.status == 200) {
