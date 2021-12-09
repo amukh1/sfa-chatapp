@@ -2,10 +2,10 @@
 
 console.log(location.hash)
 
-if(window.localStorage.getItem(signedIn)) {
-  if(window.localStorage.getItem(signedIn) == 'signedIn'){
+if(window.localStorage.getItem('signedIn')) {
+  if(window.localStorage.getItem('signedIn') == 'signedIn'){
     window.location.href == 'https://github.com/login/oauth/authorize?scope=user:email&client_id=89282bd6b02943279a31'
-  }else if(window.localStorage.getItem(signedIn) == 'not'){
+  }else if(window.localStorage.getItem('signedIn') == 'not'){
     alert('You need to sign in!')
     window.localStorage.setItem('signedIn', 'signedIn')
     window.Location.href = 'https://github.com/login/oauth/authorize?scope=user:email&client_id=89282bd6b02943279a31'
