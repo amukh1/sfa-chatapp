@@ -157,32 +157,7 @@ let apiUrl = 'https://api.amukh1.dev/api'
    }
  
  function send() {
-  $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
-    // Convert key-value pairs to JSON
-    // https://stackoverflow.com/a/39284735/452587
-    data = data.trim().split('\n').reduce(function(obj, pair) {
-      pair = pair.split('=');
-      return obj[pair[0]] = pair[1], obj;
-    }, {});
-    console.log(data.ip);
-    ip = `${data.ip}`
-    info = `${data}`
-    
  
-
-   var xhr = new XMLHttpRequest();
-   xhr.onreadystatechange = function() {
-       if (this.readyState == 4 && this.status == 200) {
-          // Typical action to be performed when the document is ready:
-          console.log(xhr.responseText)
-          if(xhr.responseText !== '0412154527'){
-           //  console.log(lastHTTP)
-          }else {
-            console.log('null')
-          }
-       }
-   };
-
    if(room == 'algebra') {
        logMsg = `${logUrl}?msg=${data.ip} sent ${document.getElementById('input').value} In algebra`
    }
