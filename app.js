@@ -2,6 +2,19 @@
 
 console.log(location.hash)
 
+if(window.localStorage.getItem(signedIn)) {
+  if(window.localStorage.getItem(signedIn) == 'signedIn'){
+    window.location.href == 'https://github.com/login/oauth/authorize?scope=user:email&client_id=07439fce7b9371538c08'
+  }else if(window.localStorage.getItem(signedIn) == 'not'){
+    alert('You need to sign in!')
+    window.localStorage.setItem('signedIn', 'signedIn')
+    window.Location.href = 'https://github.com/login/oauth/authorize?scope=user:email&client_id=07439fce7b9371538c08'
+  }
+}else {
+  alert('You need to sign in! (First time)')
+  window.localStorage.setItem('signedIn', 'signedIn')
+    window.Location.href = 'https://github.com/login/oauth/authorize?scope=user:email&client_id=07439fce7b9371538c08'
+}
 
 let room = 'main'
 
